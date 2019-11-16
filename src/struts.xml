@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+
+<struts>
+    <package name="user" extends="struts-default">
+        <!--登录-->
+        <action name="login" class="main.action.LoginAction">
+            <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
+            <result name="success">/WEB-INF/jsp/user/test.jsp</result>
+        </action>
+    </package>
+
+</struts>
