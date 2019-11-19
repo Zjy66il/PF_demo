@@ -5,12 +5,24 @@
 
 
 <struts>
+
     <package name="user" extends="struts-default">
         <!--登录-->
-        <action name="login" class="main.action.LoginAction">
+        <action name="login" class="main.action.user.LoginAction">
             <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
             <result name="success">/WEB-INF/jsp/user/test.jsp</result>
         </action>
+
+        <!--注册-->
+        <action name="regist" class="main.action.user.RegistAction">
+            <result name="success">/WEB-INF/jsp/user/Register_ok.jsp</result>
+        </action>
     </package>
 
+    <package name="valiRegister"  extends="json-default">
+    <!--注册时的Ajax验证用户名是否已注册-->
+    <action name="registVali"  class="main.action.user.RegistValiAction">
+        <result name="success" type="json"></result>
+    </action>
+    </package>
 </struts>

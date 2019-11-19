@@ -1,11 +1,12 @@
-package main.action;
+package main.action.user;
 
+import main.action.BaseAction;
 import main.dao.DaoCollection;
 import main.dao.UserDao;
 import main.entity.User;
 
 
-public class LoginAction {
+public class LoginAction extends BaseAction {
     private User user;
     public String execute() throws Exception{
 

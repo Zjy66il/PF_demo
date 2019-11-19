@@ -6,7 +6,7 @@
 <struts>
         <package name="user" namespace="/user" extends="struts-default">
             <!--登录-->
-            <action name="login" class="main.action.LoginAction">
+            <action name="login" class="main.action.user.LoginAction">
                 <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
                 <result name="success">WEB-INF/jsp/user/test.jsp</result>
             </action>

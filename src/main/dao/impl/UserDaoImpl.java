@@ -9,15 +9,26 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class UserDaoImpl implements UserDao {
-    //private static final String INSERT = "";
+    private static final String INSERT = "insert into t_user(username,password)values(?,?)";
     //private static final String FINDBYEMAIL = "";
     private static final String FINDBYNAME = "select * from t_user where username=?";
     //private static final String UPDATE = "";
 
-
+    //数据库中加入新用户
     @Override
     public void save(User u) throws Exception {
+        PreparedStatement prep = null;
+        Connection conn = null;
+        try{
+            conn = DBConnection.getConnection();
+            prep = conn.prepareStatement(INSERT);
+            prep.setString(1,u.getUsername());
+            prep.setString(2,u.getPassword());
 
+            prep.executeUpdate();
+        }finally {
+            DBConnection.close(prep,conn);
+        }
     }
 
     @Override
