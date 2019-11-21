@@ -21,6 +21,7 @@ $(function () {
         if (val == "") {
             info.text("用户名不能为空");
         } else {
+            info.text("正在检测")
             $.post(
                     "registVali!valiName",
                     {'user.username':val},

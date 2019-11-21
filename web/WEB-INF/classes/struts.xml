@@ -12,6 +12,12 @@
             <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
             <result name="success">/WEB-INF/jsp/user/test.jsp</result>
         </action>
+        <!--注册跳转-->
+        <action name="toRegistAction" class="main.action.user.ToRegistAction">
+            <result name="register_form">
+                /WEB-INF/jsp/user/Register_form.jsp
+            </result>
+        </action>
 
         <!--注册-->
         <action name="regist" class="main.action.user.RegistAction">

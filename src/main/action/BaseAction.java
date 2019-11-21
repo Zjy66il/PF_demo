@@ -11,13 +11,13 @@ public class BaseAction implements SessionAware, ServletRequestAware {
     protected HttpServletRequest request;
 
     @Override
-    public void setServletRequest(HttpServletRequest httpServletRequest) {
+    public void setServletRequest(HttpServletRequest request) {
         this.request=request;
 
     }
 
     @Override
-    public void setSession(Map<String, Object> map) {
+    public void setSession(Map<String, Object> session) {
         this.session=session;
 
     }
