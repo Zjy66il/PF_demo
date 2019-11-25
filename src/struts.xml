@@ -5,13 +5,24 @@
 
 
 <struts>
-
     <package name="user" extends="struts-default">
+        <action name="mainAction" class="main.action.main.MainAction">
+            <result name="main">/WEB-INF/jsp/main/main.jsp</result>
+        </action>
+
+        <!--登录跳转-->
+        <action name="toLoginAction" class="main.action.user.ToLoginAction">
+        <result name="login_form">
+            /WEB-INF/jsp/user/Login_form.jsp
+        </result>
+        </action>
+
         <!--登录-->
         <action name="login" class="main.action.user.LoginAction">
             <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
-            <result name="success">/WEB-INF/jsp/user/test.jsp</result>
+            <result name="success">/WEB-INF/jsp/main/main.jsp</result>
         </action>
+
         <!--注册跳转-->
         <action name="toRegistAction" class="main.action.user.ToRegistAction">
             <result name="register_form">
@@ -22,6 +33,16 @@
         <!--注册-->
         <action name="regist" class="main.action.user.RegistAction">
             <result name="success">/WEB-INF/jsp/user/Register_ok.jsp</result>
+        </action>
+
+        <!-- 登出 -->
+        <action name="logout" class="main.action.user.LogoutAction">
+            <result>/WEB-INF/jsp/main/main.jsp</result>
+        </action>
+
+        <!--书籍展示-->
+        <action name="showAction" class="main.action.main.ShowAction">
+            <result name="show">/WEB-INF/jsp/main/showBook.jsp</result>
         </action>
     </package>
 

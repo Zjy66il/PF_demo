@@ -20,6 +20,7 @@ public class LoginAction extends BaseAction {
 
         }
         //登录成功
+        session.put("s_user", u);
         return "success";
 
     }

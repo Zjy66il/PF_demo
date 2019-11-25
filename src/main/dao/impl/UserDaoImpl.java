@@ -7,6 +7,7 @@ import main.util.DBConnection;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 public class UserDaoImpl implements UserDao {
     private static final String INSERT = "insert into t_user(username,password)values(?,?)";
@@ -19,15 +20,15 @@ public class UserDaoImpl implements UserDao {
     public void save(User u) throws Exception {
         PreparedStatement prep = null;
         Connection conn = null;
-        try{
+        try {
             conn = DBConnection.getConnection();
             prep = conn.prepareStatement(INSERT);
-            prep.setString(1,u.getUsername());
-            prep.setString(2,u.getPassword());
+            prep.setString(1, u.getUsername());
+            prep.setString(2, u.getPassword());
 
             prep.executeUpdate();
-        }finally {
-            DBConnection.close(prep,conn);
+        } finally {
+            DBConnection.close(prep, conn);
         }
     }
 
@@ -39,31 +40,31 @@ public class UserDaoImpl implements UserDao {
     //在数据库内搜索用户名
     @Override
     public User findByName(String username) throws Exception {
-            PreparedStatement prep = null;
-            Connection conn = null;
-            User u = null;
-            try {
-                conn = DBConnection.getConnection();
-                prep = conn.prepareStatement(FINDBYNAME);//预编译类PreparedStatement
-                prep.setString(1, username);
-                ResultSet rst = prep.executeQuery();
-                if (rst.next()) {
-                    u = new User();
-                    u.setUsername(rst.getString("username"));
-                    u.setPassword(rst.getString("password"));
+        PreparedStatement prep = null;
+        Connection conn = null;
+        User u = null;
+        try {
+            conn = DBConnection.getConnection();
+            prep = conn.prepareStatement(FINDBYNAME);//预编译类PreparedStatement
+            prep.setString(1, username);
+            ResultSet rst = prep.executeQuery();
+            if (rst.next()) {
+                u = new User();
+                u.setUsername(rst.getString("username"));
+                u.setPassword(rst.getString("password"));
 
-                    int is_verify = rst.getInt("state");
-                    if (is_verify==1) {
-                        u.setState(true);
-                    } else {
-                        u.setState(false);
-                    }
-
+                int is_verify = rst.getInt("state");
+                if (is_verify == 1) {
+                    u.setState(true);
+                } else {
+                    u.setState(false);
                 }
 
-            } finally {
-                DBConnection.close(prep, conn);
             }
+
+        } finally {
+            DBConnection.close(prep, conn);
+        }
         return u;
     }
 
@@ -71,4 +72,5 @@ public class UserDaoImpl implements UserDao {
     public void update(User u) throws Exception {
 
     }
+
 }

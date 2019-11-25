@@ -19,7 +19,7 @@
             <img src="${pageContext.request.contextPath}/images/login_success.jpg" />
         </div>
         <h5>
-            ${s_user.username }，欢迎加入ReBook网
+            ${s_user.username }，欢迎加入!
         </h5>
 
         <ul>
@@ -28,7 +28,7 @@
             </li>
             <li>
                 进入“
-                <a href="#">我的信息</a>”查看并管理您的个人信息
+                <a href="${pageContext.request.contextPath}/cart/cart">我的购物车</a>”查看并管理您的购物信息
             </li>
             <li>
                 <a href="${pageContext.request.contextPath}/main/mainAction">浏览并选购商品</a>
