@@ -8,5 +8,6 @@ import java.util.List;
 
 public interface ProductDao {
 
-    public List<Book> findById() throws Exception;
+    public List<Book> findByAll() throws Exception;
+    public Product findById(int id) throws Exception;
 }

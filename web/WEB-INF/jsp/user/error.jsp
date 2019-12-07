@@ -11,6 +11,10 @@
     <title>错误页面</title>
 </head>
 <body>
-    对不起，操作异常！
+    用户名或密码错误！
+    <p>
+        <a href="${pageContext.request.contextPath}/user/toLoginAction">重新登陆&gt;&gt;</a>
+    </p>
+
 </body>
 </html>

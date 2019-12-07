@@ -27,7 +27,7 @@
     <div class="book_center">
 
         <div class=second_c_border1 id="recommend">
-            <s:action name="showAction"  executeResult="true"></s:action>
+            <s:action name="showAction" namespace="/main" executeResult="true"></s:action>
         </div>
 
         <div class="clear">

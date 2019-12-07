@@ -17,11 +17,11 @@
         <s:iterator value="books">
             <div class=second_c_02_b1>
                 <div class=second_c_02_b1_1>
-                    <a href="http://localhost:8080/dangdang/main/book_view?id=${id }" ><img src="${pageContext.request.contextPath}/productImages/${book_pic }" width=70 border=0 /> </a>
+                   <img src="${pageContext.request.contextPath}/productImages/${book_pic }" width=70 border=0 />
                 </div>
                 <div class=second_c_02_b1_2>
                     <h3>
-                        <a href="http://localhost:8080/dangdang/main/book_view?id=${id }" title='${book_name }'>书名:${book_name }</a>
+                        <a href="http://localhost:8880/PF_demo/main/book_view?id=${id }" title='${book_name }'>书名:${book_name }</a>
                     </h3>
                     <h4>
                         作者：${author } 著

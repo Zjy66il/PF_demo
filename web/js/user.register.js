@@ -27,7 +27,7 @@ $(function () {
                     {'user.username':val},
                     function(data){
                         if(data.flag){
-                            info.html("该用户名可用");
+                            info.html("该用户名可用").css('color','green');
                             N = true;
                         }else{
                             info.text("用户名已存在");

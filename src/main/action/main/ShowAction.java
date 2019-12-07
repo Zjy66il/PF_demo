@@ -14,7 +14,7 @@ public class ShowAction extends BaseAction {
 
     public String execute() throws Exception{
         ProductDao pDao = DaoCollection.getProductDAO();
-        books = pDao.findById();
+        books = pDao.findByAll();
 
         return "show";
     }

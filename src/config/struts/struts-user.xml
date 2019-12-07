@@ -4,11 +4,42 @@
         "http://struts.apache.org/dtds/struts-2.1.7.dtd">
 
 <struts>
-        <package name="user" namespace="/user" extends="struts-default">
+        <package name="user" namespace="/user" extends="my-default">
+            <!--登录跳转-->
+            <action name="toLoginAction" class="main.action.user.ToLoginAction">
+                <result name="login_form">
+                    /WEB-INF/jsp/user/Login_form.jsp
+                </result>
+            </action>
+
             <!--登录-->
             <action name="login" class="main.action.user.LoginAction">
                 <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
-                <result name="success">WEB-INF/jsp/user/test.jsp</result>
+                <result name="success">/WEB-INF/jsp/main/main.jsp</result>
+            </action>
+
+            <!--注册跳转-->
+            <action name="toRegistAction" class="main.action.user.ToRegistAction">
+                <result name="register_form">
+                    /WEB-INF/jsp/user/Register_form.jsp
+                </result>
+            </action>
+
+            <!--注册-->
+            <action name="regist" class="main.action.user.RegistAction">
+                <result name="success">/WEB-INF/jsp/user/Register_ok.jsp</result>
+            </action>
+
+            <!-- 登出 -->
+            <action name="logout" class="main.action.user.LogoutAction">
+                <result>/WEB-INF/jsp/main/main.jsp</result>
+            </action>
+        </package>
+
+        <!--注册时的Ajax验证用户名是否已注册-->
+        <package name="valiRegister" namespace="/user" extends="json-default">
+            <action name="registVali"  class="main.action.user.RegistValiAction">
+                <result name="success" type="json"></result>
             </action>
         </package>
 

@@ -12,7 +12,7 @@ public class BookViewAction extends BaseAction{
     public String execute() throws Exception{
         //通过dao获取书本信息
         ProductDao pDao = DaoCollection.getProductDAO();
-        //book = (Book) pDao.findById(id);
+        book = (Book) pDao.findById(id);
         return "bookview";
     }
 
