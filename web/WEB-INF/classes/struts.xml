@@ -5,9 +5,12 @@
 
 
 <struts>
+    <constant name="struts.action.excludePattern" value="/static/.*?" />
+
     <include file="config/struts/struts-user.xml"></include>
     <include file="config/struts/struts-main.xml"></include>
     <include file="config/struts/struts-cart.xml"></include>
+    <include file="config/struts/struts-order.xml"></include>
 
 
     <package name="my-default" extends="struts-default">

@@ -33,7 +33,8 @@
             <result name="login" type="redirectAction">
                 <param name="namespace">/user</param>
                 <param name="actionName">toLoginAction</param>
-            </result></global-results>
+            </result>
+        </global-results>
 
         <action name="cartBuy" class="main.action.cart.CartAction"
                 method="buy">

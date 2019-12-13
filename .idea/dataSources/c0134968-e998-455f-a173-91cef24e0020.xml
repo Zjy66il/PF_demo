@@ -651,8 +651,8 @@
     <schema id="216" parent="1" name="S0174934">
       <ObjectId>270</ObjectId>
       <CreatedTimestamp>2019-09-21.00:31:04</CreatedTimestamp>
-      <ModifiedTimestamp>2019-11-22.23:09:20</ModifiedTimestamp>
-      <IntrospectionTimestamp>2019-11-22.23:09:24</IntrospectionTimestamp>
+      <ModifiedTimestamp>2019-12-13.17:17:54</ModifiedTimestamp>
+      <IntrospectionTimestamp>2019-12-13.17:17:57</IntrospectionTimestamp>
       <CommentsHash>333987783570</CommentsHash>
       <Current>1</Current>
     </schema>
@@ -776,71 +776,115 @@
     <schema id="256" parent="1" name="YB">
       <ObjectId>91</ObjectId>
     </schema>
-    <sequence id="257" parent="216" name="BOOK_ID_SEQ">
-      <ObjectId>164666</ObjectId>
-      <CreatedTimestamp>2019-11-22</CreatedTimestamp>
-      <ModifiedTimestamp>2019-11-22</ModifiedTimestamp>
+    <sequence id="257" parent="216" name="T_BOOK_ID_SEQ">
+      <ObjectId>167181</ObjectId>
+      <Outdated>1</Outdated>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
       <SequenceIdentity>1..999999999</SequenceIdentity>
     </sequence>
-    <table id="258" parent="216" name="ACTION_LOG">
+    <sequence id="258" parent="216" name="T_ITEM_ID_SEQ">
+      <ObjectId>167178</ObjectId>
+      <Outdated>1</Outdated>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <SequenceIdentity>1..999999999</SequenceIdentity>
+    </sequence>
+    <sequence id="259" parent="216" name="T_ORDER_ID_SEQ">
+      <ObjectId>167179</ObjectId>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <SequenceIdentity>1..999999999</SequenceIdentity>
+    </sequence>
+    <sequence id="260" parent="216" name="T_PRODUCT_ID_SEQ">
+      <ObjectId>167180</ObjectId>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <SequenceIdentity>1..999999999</SequenceIdentity>
+    </sequence>
+    <sequence id="261" parent="216" name="T_RECEIVE_ADDRESS_ID_SEQ">
+      <ObjectId>167184</ObjectId>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <SequenceIdentity>1..999999999</SequenceIdentity>
+    </sequence>
+    <table id="262" parent="216" name="ACTION_LOG">
       <ObjectId>161283</ObjectId>
       <Outdated>1</Outdated>
       <CreatedTimestamp>2019-10-26.06:29:52</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-29.07:10:25</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="259" parent="216" name="DEPT">
+    <table id="263" parent="216" name="DEPT">
       <ObjectId>158113</ObjectId>
       <CreatedTimestamp>2019-09-29.22:28:19</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-29.22:28:19</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="260" parent="216" name="EMP">
+    <table id="264" parent="216" name="EMP">
       <ObjectId>158112</ObjectId>
       <CreatedTimestamp>2019-09-29.22:27:14</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-29.22:27:14</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="261" parent="216" name="EMP10">
+    <table id="265" parent="216" name="EMP10">
       <ObjectId>157056</ObjectId>
       <CreatedTimestamp>2019-09-21.00:38:49</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-21.00:38:49</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="262" parent="216" name="MYTEMP">
+    <table id="266" parent="216" name="MYTEMP">
       <ObjectId>157051</ObjectId>
       <CreatedTimestamp>2019-09-21.00:31:04</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-21.00:31:04</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="263" parent="216" name="T_A">
+    <table id="267" parent="216" name="T_A">
       <ObjectId>158183</ObjectId>
       <CreatedTimestamp>2019-09-29.23:40:54</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-29.23:40:54</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="264" parent="216" name="T_BOOK">
+    <table id="268" parent="216" name="T_BOOK">
       <ObjectId>164678</ObjectId>
-      <Outdated>1</Outdated>
       <CreatedTimestamp>2019-11-22</CreatedTimestamp>
-      <ModifiedTimestamp>2019-11-22</ModifiedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="265" parent="216" name="T_PRODUCT">
+    <table id="269" parent="216" name="T_ITEM">
+      <ObjectId>167174</ObjectId>
+      <Outdated>1</Outdated>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="270" parent="216" name="T_ORDER">
+      <ObjectId>167176</ObjectId>
+      <Outdated>1</Outdated>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="271" parent="216" name="T_PRODUCT">
       <ObjectId>164668</ObjectId>
-      <Outdated>1</Outdated>
       <CreatedTimestamp>2019-11-22</CreatedTimestamp>
-      <ModifiedTimestamp>2019-11-22</ModifiedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="266" parent="216" name="T_USER">
+    <table id="272" parent="216" name="T_RECEIVE_ADDRESS">
+      <ObjectId>167182</ObjectId>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="273" parent="216" name="T_USER">
       <ObjectId>161098</ObjectId>
       <Outdated>1</Outdated>
       <CreatedTimestamp>2019-10-25.19:29:09</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-27.07:16:32</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <routine id="267" parent="216" name="GETDEPT_SAL">
+    <routine id="274" parent="216" name="GETDEPT_SAL">
       <ObjectId>158103</ObjectId>
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>348</SourceTextLength>
@@ -848,7 +892,7 @@
       <CreatedTimestamp>2019-09-29.22:25:16</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-29.22:52:54</ModifiedTimestamp>
     </routine>
-    <routine id="268" parent="216" name="GETNO_XH">
+    <routine id="275" parent="216" name="GETNO_XH">
       <ObjectId>158172</ObjectId>
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>861</SourceTextLength>
@@ -856,7 +900,7 @@
       <CreatedTimestamp>2019-09-29.23:20:43</CreatedTimestamp>
       <ModifiedTimestamp>2019-09-29.23:50:41</ModifiedTimestamp>
     </routine>
-    <routine id="269" parent="216" name="GETNO_XH2">
+    <routine id="276" parent="216" name="GETNO_XH2">
       <ObjectId>159340</ObjectId>
       <RoutineKind>function</RoutineKind>
       <SourceTextLength>676</SourceTextLength>
@@ -864,155 +908,156 @@
       <CreatedTimestamp>2019-10-11.06:55:17</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-11.17:14:00</ModifiedTimestamp>
     </routine>
-    <routine id="270" parent="216" name="PRO_REG_USER">
+    <routine id="277" parent="216" name="PRO_REG_USER">
       <ObjectId>161079</ObjectId>
+      <Outdated>1</Outdated>
       <RoutineKind>procedure</RoutineKind>
       <SourceTextLength>289</SourceTextLength>
       <DependsOnIds>161098</DependsOnIds>
       <CreatedTimestamp>2019-10-25.18:53:36</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-25.19:29:09</ModifiedTimestamp>
     </routine>
-    <column id="271" parent="258" name="USERNAME">
+    <column id="278" parent="262" name="USERNAME">
       <Position>1</Position>
       <Comment>用户名</Comment>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
       <DefaultExpression>user</DefaultExpression>
     </column>
-    <column id="272" parent="258" name="ACTION">
+    <column id="279" parent="262" name="ACTION">
       <Position>2</Position>
       <Comment>操作</Comment>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
     </column>
-    <column id="273" parent="258" name="LOGDATE">
+    <column id="280" parent="262" name="LOGDATE">
       <Position>3</Position>
       <Comment>操作时间</Comment>
       <DataType>DATE|0s</DataType>
       <DefaultExpression>sysdate</DefaultExpression>
     </column>
-    <column id="274" parent="258" name="IP">
+    <column id="281" parent="262" name="IP">
       <Position>4</Position>
       <Comment>ip地址</Comment>
       <DataType>VARCHAR2(14 byte)|0s</DataType>
     </column>
-    <column id="275" parent="259" name="DEPTNO">
+    <column id="282" parent="263" name="DEPTNO">
       <Position>1</Position>
       <DataType>NUMBER(2 digit)|0s</DataType>
     </column>
-    <column id="276" parent="259" name="DNAME">
+    <column id="283" parent="263" name="DNAME">
       <Position>2</Position>
       <DataType>VARCHAR2(14 byte)|0s</DataType>
     </column>
-    <column id="277" parent="259" name="LOC">
+    <column id="284" parent="263" name="LOC">
       <Position>3</Position>
       <DataType>VARCHAR2(13 byte)|0s</DataType>
     </column>
-    <column id="278" parent="260" name="EMPNO">
+    <column id="285" parent="264" name="EMPNO">
       <Position>1</Position>
       <DataType>NUMBER(4 digit)|0s</DataType>
     </column>
-    <column id="279" parent="260" name="ENAME">
+    <column id="286" parent="264" name="ENAME">
       <Position>2</Position>
       <DataType>VARCHAR2(10 byte)|0s</DataType>
     </column>
-    <column id="280" parent="260" name="JOB">
+    <column id="287" parent="264" name="JOB">
       <Position>3</Position>
       <DataType>VARCHAR2(9 byte)|0s</DataType>
     </column>
-    <column id="281" parent="260" name="MGR">
+    <column id="288" parent="264" name="MGR">
       <Position>4</Position>
       <DataType>NUMBER(4 digit)|0s</DataType>
     </column>
-    <column id="282" parent="260" name="HIREDATE">
+    <column id="289" parent="264" name="HIREDATE">
       <Position>5</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="283" parent="260" name="SAL">
+    <column id="290" parent="264" name="SAL">
       <Position>6</Position>
       <DataType>NUMBER(7,2 digit)|0s</DataType>
     </column>
-    <column id="284" parent="260" name="COMM">
+    <column id="291" parent="264" name="COMM">
       <Position>7</Position>
       <DataType>NUMBER(7,2 digit)|0s</DataType>
     </column>
-    <column id="285" parent="260" name="DEPTNO">
+    <column id="292" parent="264" name="DEPTNO">
       <Position>8</Position>
       <DataType>NUMBER(2 digit)|0s</DataType>
     </column>
-    <column id="286" parent="261" name="EMPNO">
+    <column id="293" parent="265" name="EMPNO">
       <Position>1</Position>
       <DataType>NUMBER(4 digit)|0s</DataType>
     </column>
-    <column id="287" parent="261" name="ENAME">
+    <column id="294" parent="265" name="ENAME">
       <Position>2</Position>
       <DataType>VARCHAR2(10 byte)|0s</DataType>
     </column>
-    <column id="288" parent="261" name="JOB">
+    <column id="295" parent="265" name="JOB">
       <Position>3</Position>
       <DataType>VARCHAR2(9 byte)|0s</DataType>
     </column>
-    <column id="289" parent="261" name="MGR">
+    <column id="296" parent="265" name="MGR">
       <Position>4</Position>
       <DataType>NUMBER(4 digit)|0s</DataType>
     </column>
-    <column id="290" parent="261" name="HIREDATE">
+    <column id="297" parent="265" name="HIREDATE">
       <Position>5</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="291" parent="261" name="SAL">
+    <column id="298" parent="265" name="SAL">
       <Position>6</Position>
       <DataType>NUMBER(7,2 digit)|0s</DataType>
     </column>
-    <column id="292" parent="261" name="COMM">
+    <column id="299" parent="265" name="COMM">
       <Position>7</Position>
       <DataType>NUMBER(7,2 digit)|0s</DataType>
     </column>
-    <column id="293" parent="261" name="DEPTNO">
+    <column id="300" parent="265" name="DEPTNO">
       <Position>8</Position>
       <DataType>NUMBER(2 digit)|0s</DataType>
     </column>
-    <column id="294" parent="262" name="EMPNO">
+    <column id="301" parent="266" name="EMPNO">
       <Position>1</Position>
       <DataType>NUMBER(4 digit)|0s</DataType>
     </column>
-    <column id="295" parent="262" name="ENAME">
+    <column id="302" parent="266" name="ENAME">
       <Position>2</Position>
       <DataType>VARCHAR2(10 byte)|0s</DataType>
     </column>
-    <column id="296" parent="262" name="JOB">
+    <column id="303" parent="266" name="JOB">
       <Position>3</Position>
       <DataType>VARCHAR2(9 byte)|0s</DataType>
     </column>
-    <column id="297" parent="262" name="MGR">
+    <column id="304" parent="266" name="MGR">
       <Position>4</Position>
       <DataType>NUMBER(4 digit)|0s</DataType>
     </column>
-    <column id="298" parent="262" name="HIREDATE">
+    <column id="305" parent="266" name="HIREDATE">
       <Position>5</Position>
       <DataType>DATE|0s</DataType>
     </column>
-    <column id="299" parent="262" name="SAL">
+    <column id="306" parent="266" name="SAL">
       <Position>6</Position>
       <DataType>NUMBER(7,2 digit)|0s</DataType>
     </column>
-    <column id="300" parent="262" name="COMM">
+    <column id="307" parent="266" name="COMM">
       <Position>7</Position>
       <DataType>NUMBER(7,2 digit)|0s</DataType>
     </column>
-    <column id="301" parent="262" name="DEPTNO">
+    <column id="308" parent="266" name="DEPTNO">
       <Position>8</Position>
       <DataType>NUMBER(2 digit)|0s</DataType>
     </column>
-    <column id="302" parent="263" name="XH">
+    <column id="309" parent="267" name="XH">
       <Position>1</Position>
       <DataType>VARCHAR2(7 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="303" parent="263" name="XM">
+    <column id="310" parent="267" name="XM">
       <Position>2</Position>
       <DataType>VARCHAR2(10 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="304" parent="263" name="SYS_C0085823">
+    <index id="311" parent="267" name="SYS_C0085823">
       <ObjectId>158184</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2019-09-29.23:40:54</CreatedTimestamp>
@@ -1021,7 +1066,7 @@
       <ColNames>XH</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="305" parent="263" name="SYS_C0085823">
+    <key id="312" parent="267" name="SYS_C0085823">
       <NameSurrogate>1</NameSurrogate>
       <ModifiedTimestamp>2019-09-29.23:40:54</ModifiedTimestamp>
       <ColNames>XH</ColNames>
@@ -1029,57 +1074,57 @@
       <UnderlyingIndexName>SYS_C0085823</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="306" parent="264" name="ID">
+    <column id="313" parent="268" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(12 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="307" parent="264" name="AUTHOR">
+    <column id="314" parent="268" name="AUTHOR">
       <Position>2</Position>
       <DataType>VARCHAR2(200 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="308" parent="264" name="PUBLISHING">
+    <column id="315" parent="268" name="PUBLISHING">
       <Position>3</Position>
       <DataType>VARCHAR2(200 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="309" parent="264" name="PUBLISH_TIME">
+    <column id="316" parent="268" name="PUBLISH_TIME">
       <Position>4</Position>
       <DataType>NUMBER(20 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="310" parent="264" name="WORD_NUMBER">
+    <column id="317" parent="268" name="WORD_NUMBER">
       <Position>5</Position>
       <DataType>VARCHAR2(15 byte)|0s</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="311" parent="264" name="WHICH_EDTION">
+    <column id="318" parent="268" name="WHICH_EDTION">
       <Position>6</Position>
       <DataType>VARCHAR2(15 byte)|0s</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="312" parent="264" name="TOTAL_PAGE">
+    <column id="319" parent="268" name="TOTAL_PAGE">
       <Position>7</Position>
       <DataType>VARCHAR2(15 byte)|0s</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="313" parent="264" name="PRINT_TIME">
+    <column id="320" parent="268" name="PRINT_TIME">
       <Position>8</Position>
       <DataType>NUMBER(20 digit)|0s</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="314" parent="264" name="ISBN">
+    <column id="321" parent="268" name="ISBN">
       <Position>9</Position>
       <DataType>VARCHAR2(25 byte)|0s</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="315" parent="264" name="CATALOGUE">
+    <column id="322" parent="268" name="CATALOGUE">
       <Position>10</Position>
       <DataType>VARCHAR2(500 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="316" parent="264" name="SYS_C0090829">
+    <index id="323" parent="268" name="SYS_C0090829">
       <ObjectId>164679</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2019-11-22</CreatedTimestamp>
@@ -1088,7 +1133,7 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="317" parent="264" name="SYS_C0090829">
+    <key id="324" parent="268" name="SYS_C0090829">
       <NameSurrogate>1</NameSurrogate>
       <ModifiedTimestamp>2019-11-22</ModifiedTimestamp>
       <ColNames>ID</ColNames>
@@ -1096,48 +1141,185 @@
       <UnderlyingIndexName>SYS_C0090829</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="318" parent="265" name="ID">
+    <trigger id="325" parent="268" name="BOOK_TG_INSERTID">
+      <ObjectId>167557</ObjectId>
+      <SourceTextLength>66</SourceTextLength>
+      <CreatedTimestamp>2019-12-13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="326" parent="269" name="ID">
       <Position>1</Position>
-      <DataType>NUMBER(*)|0s</DataType>
+      <DataType>NUMBER(5 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="319" parent="265" name="BOOK_NAME">
+    <column id="327" parent="269" name="ORDER_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="328" parent="269" name="PRODUCT_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="329" parent="269" name="PRODUCT_NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="330" parent="269" name="DISCOUNT_PRICE">
+      <Position>5</Position>
+      <DataType>NUMBER(10,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="331" parent="269" name="PRODUCT_NUM">
+      <Position>6</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="332" parent="269" name="T_ORDER_PK">
+      <ObjectId>167175</ObjectId>
+      <Outdated>1</Outdated>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <TablespaceName>YY</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="333" parent="269" name="T_ORDER_PK">
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>T_ORDER_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="334" parent="269" name="ITEM_TG_INSERTID">
+      <ObjectId>167556</ObjectId>
+      <SourceTextLength>66</SourceTextLength>
+      <Invalid>1</Invalid>
+      <CreatedTimestamp>2019-12-13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="335" parent="270" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="336" parent="270" name="USERNAME">
       <Position>2</Position>
       <DataType>VARCHAR2(100 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="320" parent="265" name="DESCRIPTION">
+    <column id="337" parent="270" name="STAUTS">
       <Position>3</Position>
-      <DataType>VARCHAR2(200 byte)|0s</DataType>
+      <DataType>NUMBER(1 digit)|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="321" parent="265" name="ADD_TIME">
+    <column id="338" parent="270" name="ORDER_TIME">
       <Position>4</Position>
       <DataType>NUMBER(20 digit)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="322" parent="265" name="FIXED_PRICE">
+    <column id="339" parent="270" name="ORDER_DESC">
+      <Position>5</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="340" parent="270" name="TOTAL_PRICE">
+      <Position>6</Position>
+      <DataType>NUMBER(10,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="341" parent="270" name="RECEIVE_NAME">
+      <Position>7</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="342" parent="270" name="FULL_ADDRESS">
+      <Position>8</Position>
+      <DataType>VARCHAR2(200 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="343" parent="270" name="POSTAL_CODE">
+      <Position>9</Position>
+      <DataType>VARCHAR2(8 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="344" parent="270" name="MOBILE">
+      <Position>10</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="345" parent="270" name="D_ORDER_PK">
+      <ObjectId>167177</ObjectId>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <TablespaceName>YY</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="346" parent="270" name="D_ORDER_PK">
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>D_ORDER_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="347" parent="270" name="ORDER_TG_INSERTID">
+      <ObjectId>167552</ObjectId>
+      <SourceTextLength>67</SourceTextLength>
+      <CreatedTimestamp>2019-12-13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="348" parent="271" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="349" parent="271" name="BOOK_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="350" parent="271" name="DESCRIPTION">
+      <Position>3</Position>
+      <DataType>VARCHAR2(200 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="351" parent="271" name="ADD_TIME">
+      <Position>4</Position>
+      <DataType>NUMBER(20 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="352" parent="271" name="FIXED_PRICE">
       <Position>5</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="323" parent="265" name="DISCOUNT_PRICE">
+    <column id="353" parent="271" name="DISCOUNT_PRICE">
       <Position>6</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="324" parent="265" name="HAS_DELETED">
+    <column id="354" parent="271" name="HAS_DELETED">
       <Position>7</Position>
       <DataType>NUMBER(*)|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="325" parent="265" name="BOOK_PIC">
+    <column id="355" parent="271" name="BOOK_PIC">
       <Position>8</Position>
       <DataType>VARCHAR2(200 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="326" parent="265" name="T_BOOK_PK">
+    <index id="356" parent="271" name="T_BOOK_PK">
       <ObjectId>164669</ObjectId>
       <CreatedTimestamp>2019-11-22</CreatedTimestamp>
       <ModifiedTimestamp>2019-11-22</ModifiedTimestamp>
@@ -1145,47 +1327,110 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="327" parent="265" name="T_BOOK_PK">
+    <key id="357" parent="271" name="T_BOOK_PK">
       <ModifiedTimestamp>2019-11-22</ModifiedTimestamp>
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>T_BOOK_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="328" parent="266" name="USERNAME">
+    <trigger id="358" parent="271" name="PRODUCT_TG_INSERTID">
+      <ObjectId>167558</ObjectId>
+      <SourceTextLength>69</SourceTextLength>
+      <CreatedTimestamp>2019-12-13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="359" parent="272" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="360" parent="272" name="USERNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="361" parent="272" name="RECEIVE_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="362" parent="272" name="FULL_ADDRESS">
+      <Position>4</Position>
+      <DataType>VARCHAR2(200 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="363" parent="272" name="POSTAL_CODE">
+      <Position>5</Position>
+      <DataType>VARCHAR2(8 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="364" parent="272" name="MOBILE">
+      <Position>6</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="365" parent="272" name="T_RECEIVE_ADDRESS_PK">
+      <ObjectId>167183</ObjectId>
+      <CreatedTimestamp>2019-12-11</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <TablespaceName>YY</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="366" parent="272" name="T_RECEIVE_ADDRESS_PK">
+      <ModifiedTimestamp>2019-12-11</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>T_RECEIVE_ADDRESS_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <trigger id="367" parent="272" name="ADDRESS_TG_INSERTID">
+      <ObjectId>167559</ObjectId>
+      <SourceTextLength>77</SourceTextLength>
+      <CreatedTimestamp>2019-12-13</CreatedTimestamp>
+      <ModifiedTimestamp>2019-12-13</ModifiedTimestamp>
+      <Events>I</Events>
+      <Turn>before-row</Turn>
+    </trigger>
+    <column id="368" parent="273" name="USERNAME">
       <Position>1</Position>
       <Comment>用户名</Comment>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="329" parent="266" name="PASSWORD">
+    <column id="369" parent="273" name="PASSWORD">
       <Position>2</Position>
       <Comment>口令</Comment>
       <DataType>VARCHAR2(50 byte)|0s</DataType>
     </column>
-    <column id="330" parent="266" name="STATE">
+    <column id="370" parent="273" name="STATE">
       <Position>3</Position>
       <Comment>用户状态</Comment>
       <DataType>NUMBER(*)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <index id="331" parent="266" name="T_USER_USERNAMEPK">
+    <index id="371" parent="273" name="T_USER_USERNAMEPK">
       <ObjectId>161099</ObjectId>
+      <Outdated>1</Outdated>
       <CreatedTimestamp>2019-10-25.19:29:09</CreatedTimestamp>
       <ModifiedTimestamp>2019-10-25.19:29:09</ModifiedTimestamp>
       <TablespaceName>YY</TablespaceName>
       <ColNames>USERNAME</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="332" parent="266" name="T_USER_USERNAMEPK">
+    <key id="372" parent="273" name="T_USER_USERNAMEPK">
       <ModifiedTimestamp>2019-10-25.19:29:09</ModifiedTimestamp>
       <ColNames>USERNAME</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>T_USER_USERNAMEPK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <trigger id="333" parent="266" name="TRG_ACTION_STME">
+    <trigger id="373" parent="273" name="TRG_ACTION_STME">
       <ObjectId>161289</ObjectId>
+      <Outdated>1</Outdated>
       <SourceTextLength>464</SourceTextLength>
       <DependsOnIds>1221,161283</DependsOnIds>
       <CreatedTimestamp>2019-10-26.06:45:02</CreatedTimestamp>
@@ -1193,36 +1438,36 @@
       <Events>IUD</Events>
       <Turn>after-row</Turn>
     </trigger>
-    <argument id="334" parent="267">
+    <argument id="374" parent="274">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>NUMBER|0s</DataType>
     </argument>
-    <argument id="335" parent="267" name="V_DEPTNO">
+    <argument id="375" parent="274" name="V_DEPTNO">
       <Position>1</Position>
       <DataType>NUMBER|0s</DataType>
     </argument>
-    <argument id="336" parent="267" name="V_DEPTNAME">
+    <argument id="376" parent="274" name="V_DEPTNAME">
       <Position>2</Position>
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="337" parent="268">
+    <argument id="377" parent="275">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="338" parent="269">
+    <argument id="378" parent="276">
       <ArgumentDirection>R</ArgumentDirection>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="339" parent="270" name="V_USERNAME">
+    <argument id="379" parent="277" name="V_USERNAME">
       <Position>1</Position>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="340" parent="270" name="V_PASSWORD">
+    <argument id="380" parent="277" name="V_PASSWORD">
       <Position>2</Position>
       <DataType>VARCHAR2|0s</DataType>
     </argument>
-    <argument id="341" parent="270" name="ST">
+    <argument id="381" parent="277" name="ST">
       <Position>3</Position>
       <ArgumentDirection>O</ArgumentDirection>
       <DataType>VARCHAR2|0s</DataType>

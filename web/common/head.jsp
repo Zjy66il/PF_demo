@@ -13,7 +13,8 @@
 		 您好，欢迎光临 </b>
 		<%if(session.getAttribute("s_user")!=null){ %>
 		[&nbsp;<a href="<%=request.getContextPath() %>/user/logout" class="b">登出</a>|<a
-                href="${pageContext.request.contextPath}/cart/cart">购物车</a></a>&nbsp;]
+                href="${pageContext.request.contextPath}/cart/cart">购物车</a>|<a
+				href="${pageContext.request.contextPath}/order/orderView">我的订单</a>&nbsp;]
 		<%} else{%>
 
 		[&nbsp;<a href="${pageContext.request.contextPath}/user/toLoginAction" class="b">登录</a>|<a

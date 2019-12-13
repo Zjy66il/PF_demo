@@ -6,21 +6,29 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page pageEncoding="utf-8" %>
+<%@page import="main.action.cart.*"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="s" uri="/struts-tags" %>
+
 <html>
 <head>
     <title>优质好书供您选择</title>
+    <link href="${pageContext.request.contextPath}/css/shopping_vehicle.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.4.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/cart.list.js"></script>
 </head>
     <body>
+    <br />
+    <br />
     <div class="my_shopping">
-        <img class="pic_shop" src="../images/pic_myshopping.gif" />
+        <img class="pic_shop" src="../images/pic_myshopping.jpg" />
     </div>
 
     <div id="div_choice" class="choice_merch">
         <h2 id="cart_tips">
-            您已选购以下商品<span style="color:red">${cart_empty}</span>
-            &nbsp;&nbsp;&nbsp;<span style="color:red"><a href="cart!clear">清空购物车</a></span>
+            您已选购以下商品：
+            &nbsp;<span style="color:red"><a href="cart!clear">清空购物车</a></span>
         </h2>
 
         <div class="choice_bord">
@@ -100,14 +108,14 @@
 
                 <div class="total_balance">
                     <div class="save_total">
-                        <span class="t_add">商品金额总计：</span>
+                        <span class="t_add">商品金额总计:</span>
                         <span class="c_red_b">
-                            ￥<span id='total_account'>${totalPrice}</span>
+                            ￥<span id='total_account'>${totalPrice}</span>&nbsp;&nbsp;&nbsp;
                         </span>
                     </div>
                     <div id="balance" class="balance">
                         <a name='checkout' href='../order/confirm' >
-                            <img src="${pageContext.request.contextPath}/images/butt_balance.gif" alt="结算" border="0" title="结算" />
+                            <img src="${pageContext.request.contextPath}/images/butt_balance.jpg" alt="结算" border="0" title="结算" />
                         </a>
                     </div>
                 </div>

@@ -3,16 +3,15 @@ package main.action.cart;
 import main.entity.Product;
 
 public class CartItem {
-    private Product p;
-    private int num=1;
-    private boolean delete=false; //删除还是购买
+    private Product pro;
+    private int num = 1;
 
-    public Product getP() {
-        return p;
+    public Product getPro() {
+        return pro;
     }
 
-    public void setP(Product p) {
-        this.p = p;
+    public void setPro(Product pro) {
+        this.pro = pro;
     }
 
     public int getNum() {
@@ -23,11 +22,4 @@ public class CartItem {
         this.num = num;
     }
 
-    public boolean isDelete() {
-        return delete;
-    }
-
-    public void setDelete(boolean delete) {
-        this.delete = delete;
-    }
 }

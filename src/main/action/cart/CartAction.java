@@ -11,7 +11,6 @@ public class CartAction extends BaseAction {
     private boolean flag;
 
     public String execute() throws Exception{
-
         return "success";
     }
 
@@ -58,24 +57,14 @@ public class CartAction extends BaseAction {
     //获取购买的商品列表
     @JSON(serialize=false)
     public List<CartItem> getCiBuy() throws Exception {
-        return getCart().getItems(false);
+        return getCart().getItems();
     }
-    //获取删除的商品列表
+
+    //获取商品总金额(按折后价计算)
     @JSON(serialize=false)
-    public List<CartItem> getCiDel() throws Exception {
-        return getCart().getItems(true);
+    public double getTotalPrice() throws Exception{
+        return getCart().total();
     }
-    //获取商品总金额(按原价计算)
-    @JSON(serialize=false)
-    public double getTotalFixed() throws Exception{
-        return getCart().total(true);
-    }
-    //获取商品总金额(按当当价计算)
-    @JSON(serialize=false)
-    public double getTotalDang() throws Exception{
-        return getCart().total(false);
-    }
-    @JSON(serialize=false)
 
 
     private CartService getCart(){

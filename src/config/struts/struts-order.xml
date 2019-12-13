@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+    <package name="order" namespace="/order" extends="my-default">
+        <!-- 定义Action -->
+        <!--订单确认-->
+        <action name="confirm" class="main.action.order.OrderConfirmAction">
+            <interceptor-ref name="MyStack"></interceptor-ref>
+            <result name="success">/WEB-INF/jsp/order/order_info.jsp</result>
+            <result name="empty" type="redirectAction">
+                <param name="namespace">/main</param>
+                <param name="actionName">mainAction</param>
+            </result>
+        </action>
+
+        <!-- 送货地址页面  -->
+        <action name="addressForm" class="main.action.order.AddressFormAction">
+            <interceptor-ref name="MyStack"></interceptor-ref>
+            <result>/WEB-INF/jsp/order/address_form.jsp</result>
+        </action>
+
+        <!-- 订单提交  -->
+        <action name="orderSubmit" class="main.action.order.OrderSubmitAction">
+<!--
+            <interceptor-ref name="tokenStack"></interceptor-ref>
+-->
+            <result name="empty" type="redirect">/WEB-INF/jsp/main/main.jsp</result>
+            <result>/WEB-INF/jsp/order/order_ok.jsp</result>
+        </action>
+
+        <!-- 订单查看  -->
+        <action name="orderView" class="main.action.order.OrderViewAction">
+            <interceptor-ref name="MyStack"></interceptor-ref>
+            <result name="orderview">/WEB-INF/jsp/order/order_list.jsp</result>
+        </action>
+    </package>
+
+    <package name="ajaxOrder" namespace="/order" extends="json-default">
+        <action name="address" class="main.action.order.AddressAction">
+            <result name="success" type="json"></result>
+        </action>
+    </package>
+</struts>

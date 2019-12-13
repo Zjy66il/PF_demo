@@ -23,8 +23,6 @@
 <DIV id=main>
     <DIV class=mainsearch></DIV>
     <DIV class=wrap>
-        <!--left start-->
-        <!--left end-->
         <DIV class=right>
             <DIV class=right_wai>
                 <DIV class=shuming>
