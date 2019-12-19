@@ -3,6 +3,7 @@ package main.entity;
 public class User {
     private String username;
     private String password;
+    private String phone;
     private boolean state;
 
     public String getUsername() {
@@ -27,6 +28,14 @@ public class User {
 
     public void setState(boolean state) {
         this.state = state;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
 

@@ -36,4 +36,37 @@
         </action>
     </package>
 
+    <package name="admin" extends="struts-default">
+
+        <!--管理员登录跳转-->
+        <action name="admin" class="main.action.admin.ToLoginAction">
+            <result name="login_form">/WEB-INF/jsp/admin/login.jsp</result>
+        </action>
+
+        <!--管理员登录-->
+        <action name="adminAction" class="main.action.admin.LoginAction">
+            <result name="fail">/WEB-INF/jsp/user/error.jsp</result>
+            <result name="success">/WEB-INF/jsp/admin/admin.jsp</result>
+        </action>
+
+        <!-- 订单查看 -->
+        <action name="orderconfirm"  class="main.action.admin.OrderConfirm">
+            <result name="orderview">/WEB-INF/jsp/admin/order_confirm.jsp</result>
+        </action>
+
+        <!-- 订单发货 -->
+        <action name="orderdeliver"  class="main.action.admin.OrderDeliver">
+            <result name="orderview" type="redirectAction">
+                <param name="namespace">/admin</param>
+                <param name="actionName">orderconfirm</param></result>
+        </action>
+
+        <!-- 订单发货 -->
+        <action name="updatedesc"  class="main.action.admin.UpdateDesc">
+            <result name="orderview" type="redirectAction">
+                <param name="namespace">/admin</param>
+                <param name="actionName">orderconfirm</param></result>
+        </action>
+    </package>
+
 </struts>

@@ -1,9 +1,6 @@
 package main.dao;
 
-import main.dao.impl.BookDaoImpl;
-import main.dao.impl.OrderDaoImpl;
-import main.dao.impl.ReceiveAddressDaoImpl;
-import main.dao.impl.UserDaoImpl;
+import main.dao.impl.*;
 
 public class DaoCollection {
     public static UserDao getUserDao() {
@@ -19,4 +16,6 @@ public class DaoCollection {
     public static ReceiveAddressDao getReceiveAddressDAO() {
         return new ReceiveAddressDaoImpl();
     }
+
+    public static AdminDao getAdminDAO(){return new AdminDaoImpl(); }
 }

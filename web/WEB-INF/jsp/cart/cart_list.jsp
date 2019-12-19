@@ -73,10 +73,10 @@
                             <span class="objhide"><img /> </span>
                         </td>
                         <td>
-                            <a href="http://localhost:8880/PF_demo/main/book_view?id=${ci.pro.id }">${ci.pro.book_name }</a>
+                            <a href="${pageContext.request.contextPath}/main/book_view?id=${ci.pro.id }">${ci.pro.book_name }</a>
                         </td>
                         <td>
-                            <a href="http://localhost:8880/PF_demo/main/book_view?id=${ci.pro.id }">
+                            <a href="${pageContext.request.contextPath}/main/book_view?id=${ci.pro.id }">
                                 <IMG id=img_show_prd src="../productImages/${ci.pro.book_pic }" width="75px"></a>
                         </td>
                         <td class="buy_td_5">

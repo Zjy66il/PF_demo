@@ -23,9 +23,132 @@ public class OrderDaoImpl implements OrderDao {
     //查询该user下的订单信息
     private final static String FIND_ORDER_INF = "select p.*,b.* from t_order p join t_item b on p.id=b.order_id where p.username=?";
 
-/*    //根据订单状态查询订单信息
-    private final static String FIND_BY_ID = "select * from t_receive_address where id=?";*/
+    //根据订单状态查询订单信息(未处理订单)
+    private final static String FIND_UNCONFIRM_INF = "select* from t_order where stauts=0";
 
+    //根据订单状态查询订单信息(已发货订单)
+    private final static String FIND_CONFIRM_INF = "select * from t_order where stauts=1";
+
+    //订单发货
+    private final static String DELIVER_ORDER = "update t_order set stauts=1 where id=?";
+
+    //更新订单说明
+    private final static String UPDATE_DESC = "update t_order set order_desc=? where id=?";
+
+
+    /**
+     * 订单发货
+     * @return 订单id
+     * @throws Exception
+     */
+    @Override
+    public void updateDesc(String desc, int id) throws Exception {
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        try {
+            conn = DBConnection.getConnection();
+            prep = conn.prepareStatement(UPDATE_DESC);
+            prep.setString(1,desc);
+            prep.setInt(2,id);
+            prep.executeUpdate();
+
+        } finally {
+            DBConnection.close(rs, prep, conn);
+        }
+    }
+
+    /**
+     * 订单发货
+     * @return 订单id
+     * @throws Exception
+     */
+    @Override
+    public void deliverOrder(int order_id) throws Exception {
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        try {
+            conn = DBConnection.getConnection();
+            prep = conn.prepareStatement(DELIVER_ORDER);
+            prep.setInt(1,order_id);
+            prep.executeUpdate();
+
+        } finally {
+            DBConnection.close(rs, prep, conn);
+        }
+    }
+
+
+    /**
+     * 处理订单
+     * @return 书籍类型id
+     * @throws Exception
+     */
+    @Override
+    public List<Order> findUnconfirmOrderInfo() throws Exception {
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        List<Order> items = new ArrayList<Order>();
+
+        try {
+            conn = DBConnection.getConnection();
+            prep = conn.prepareStatement(FIND_UNCONFIRM_INF);
+            rs = prep.executeQuery();
+
+            while (rs.next()) {
+                Item item = new Item();
+                item.setId(rs.getInt("id"));
+                item.setUsername(rs.getString("username"));
+                item.setStatus(rs.getInt("stauts"));
+                item.setOrder_time(rs.getLong("order_time"));
+                item.setOrder_desc(rs.getString("order_desc"));
+                item.setTotal_price(rs.getDouble("total_price"));
+                item.setReceive_name(rs.getString("receive_name"));
+                item.setFull_address(rs.getString("full_address"));
+                item.setPostal_code(rs.getString("postal_code"));
+                item.setMobile(rs.getString("mobile"));
+                items.add(item);
+            }
+        } finally {
+            DBConnection.close(rs, prep, conn);
+        }
+        return items;
+    }
+
+    @Override
+    public List<Order> findConfirmOrderInfo() throws Exception {
+        Connection conn = null;
+        PreparedStatement prep = null;
+        ResultSet rs = null;
+        List<Order> items = new ArrayList<Order>();
+
+        try {
+            conn = DBConnection.getConnection();
+            prep = conn.prepareStatement(FIND_CONFIRM_INF);
+            rs = prep.executeQuery();
+
+            while (rs.next()) {
+                Item item = new Item();
+                item.setId(rs.getInt("id"));
+                item.setUsername(rs.getString("username"));
+                item.setStatus(rs.getInt("stauts"));
+                item.setOrder_time(rs.getLong("order_time"));
+                item.setOrder_desc(rs.getString("order_desc"));
+                item.setTotal_price(rs.getDouble("total_price"));
+                item.setReceive_name(rs.getString("receive_name"));
+                item.setFull_address(rs.getString("full_address"));
+                item.setPostal_code(rs.getString("postal_code"));
+                item.setMobile(rs.getString("mobile"));
+
+                items.add(item);
+            }
+        } finally {
+            DBConnection.close(rs, prep, conn);
+        }
+        return items;
+    }
 
     /**
      * 新增订单
@@ -119,9 +242,6 @@ public class OrderDaoImpl implements OrderDao {
         } finally {
             DBConnection.close(rs, prep, conn);
         }
-
-
-
 
     }
 }

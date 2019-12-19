@@ -21,4 +21,6 @@ public class BaseAction implements SessionAware, ServletRequestAware {
         this.session=session;
 
     }
+
+
 }

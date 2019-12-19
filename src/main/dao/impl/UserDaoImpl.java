@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class UserDaoImpl implements UserDao {
-    private static final String INSERT = "insert into t_user(username,password)values(?,?)";
+    private static final String INSERT = "insert into t_user(username,password,phone)values(?,?,?)";
     //private static final String FINDBYEMAIL = "";
     private static final String FINDBYNAME = "select * from t_user where username=?";
     //private static final String UPDATE = "";
@@ -25,6 +25,7 @@ public class UserDaoImpl implements UserDao {
             prep = conn.prepareStatement(INSERT);
             prep.setString(1, u.getUsername());
             prep.setString(2, u.getPassword());
+            prep.setString(3,u.getPhone());
 
             prep.executeUpdate();
         } finally {

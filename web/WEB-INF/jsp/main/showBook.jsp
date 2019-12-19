@@ -21,7 +21,7 @@
                 </div>
                 <div class=second_c_02_b1_2>
                     <h3>
-                        <a href="http://localhost:8880/PF_demo/main/book_view?id=${id }" title='${book_name }'>书名:${book_name }</a>
+                        <a href= "${pageContext.request.contextPath}/main/book_view?id=${id}" title='${book_name }'>书名:${book_name }</a>
                     </h3>
                     <h4>
                         作者：${author } 著

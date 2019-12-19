@@ -17,7 +17,8 @@ public class DBConnection {
     static {
         try{
             ClassLoader classLoader = DBConnection.class.getClassLoader();
-            InputStream is = classLoader.getResourceAsStream("config/props/jdbc-oracle.properties");
+            /*InputStream is = classLoader.getResourceAsStream("config/props/jdbc-oracle.properties");*/
+            InputStream is = classLoader.getResourceAsStream("config/props/jdbc-mysql.properties");
             Properties props = new Properties();
             props.load(is);
 

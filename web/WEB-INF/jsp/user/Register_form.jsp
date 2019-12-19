@@ -45,13 +45,27 @@
             </tr>
             <tr>
                 <td valign="top" class="w1">
-                    再次输入您设置的密码：                </td>
+                    再次输入您设置的密码：
+                </td>
                 <td>
                     <input name="repwd" type="password" id="txtRepeatPass"
                            class="text_input"/>
                     <div class="text_left" id="repeatPassValidMsg">
-                        <span id="repassword.info" style="color:red"></span>                    </div>                </td>
+                        <span id="repassword.info" style="color:red"></span>
+                    </div>
+                </td>
             </tr>
+
+            <%--<tr>
+                <td>手机号: </td>
+                <td><input name="user.phone" type="text" id="txtPhone" class="text_input"></td>
+            </tr>
+            <tr>
+                <td>验证码: </td>
+                <td>
+                    <input name="verifyCode"><button type="button" class="sendVerifyCode">获取短信验证码</button>
+                </td>
+            </tr>--%>
         </table>
 
         <div class="login_in">
