@@ -56,7 +56,7 @@
                 </td>
             </tr>
 
-            <%--<tr>
+<%--            <tr>
                 <td>手机号: </td>
                 <td><input name="user.phone" type="text" id="txtPhone" class="text_input"></td>
             </tr>
