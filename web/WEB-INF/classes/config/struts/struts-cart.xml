@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+        "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+    <package name="cart" namespace="/cart" extends="my-default">
+        <!-- 定义Action -->
+        <action name="cart" class="main.action.cart.CartAction">
+            <interceptor-ref name="MyStack"></interceptor-ref>
+            <result name="success">/WEB-INF/jsp/cart/cart_list.jsp</result>
+            <result name="login" type="redirectAction">
+                <param name="namespace">/user</param>
+                <param name="actionName">toLoginAction</param></result>
+        </action>
+    </package>
+
+    <!--Cartajax-->
+    <package name="ajaxCart" namespace="/cart" extends="json-default">
+        <!-- 检测用户是否登录的拦截器-->
+        <interceptors>
+            <!--loginCheck拦截器-->
+            <interceptor name="loginCheck" class="main.interceptor.LoginInterceptor"></interceptor>
+
+            <interceptor-stack name="MyStack">
+                <interceptor-ref name="loginCheck"></interceptor-ref>
+                <interceptor-ref name="defaultStack"></interceptor-ref>
+            </interceptor-stack>
+        </interceptors>
+        <!--全局返回值-->
+        <global-results>
+            <result name="login" type="redirectAction">
+                <param name="namespace">/user</param>
+                <param name="actionName">toLoginAction</param>
+            </result>
+        </global-results>
+
+        <action name="cartBuy" class="main.action.cart.CartAction"
+                method="buy">
+            <interceptor-ref name="MyStack"></interceptor-ref>
+            <result name="success" type="json"></result>
+        </action>
+    </package>
+</struts>
